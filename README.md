@@ -82,6 +82,4 @@ O comando `npm run build` executa a checagem de tipos TypeScript e gera a versã
 - O projeto não possui backend, banco de dados ou autenticação.
 - A identificação da marca é textual. Não foram incluídos logotipo oficial, endereço, telefone, horário de funcionamento ou links de redes sociais que não tenham sido confirmados.
 
-## Antes de publicar
 
-Consulte o arquivo [`PUBLICACAO.md`](./PUBLICACAO.md) para conferir as imagens, testar as funcionalidades e revisar a entrega antes de compartilhar o repositório.
