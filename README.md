@@ -1,85 +1,68 @@
-# Lions Seminovos — Desafio Front-end
+# Desafio Front-end - Lions Seminovos
 
-Aplicação front-end desenvolvida como desafio técnico para uma vaga de desenvolvimento front-end. O projeto é **inspirado** no site público da [Lions Seminovos](https://lionsseminovos.com.br/), mas possui implementação própria e **não é o site oficial da empresa**.
+Este projeto foi criado para o desafio técnico de front-end da Lions Seminovos. A proposta foi desenvolver uma experiência inspirada no site da empresa, com página inicial, catálogo de veículos e formulário para agendar uma visita.
 
-## Objetivo
+## Como resolvi o desafio
 
-Construir uma experiência automotiva responsiva e demonstrar conhecimentos de React, TypeScript, componentização, navegação, filtros, formulários e acessibilidade básica.
+Escolhi React porque já tenho experiência criando aplicações com essa biblioteca no meu trabalho anterior. Isso me permitiu aproveitar conhecimentos que já uso no dia a dia e concentrar o trabalho na interface e nos requisitos do desafio.
 
-## Funcionalidades
+Organizei o código para simplificar a manutenção e deixar a navegação pelo projeto mais fácil. Cada página cuida de uma parte da experiência: início, catálogo, detalhes do veículo ou agendamento. Elementos que aparecem em mais de um lugar, como cabeçalho, cards e modal de desconto, ficam em componentes reutilizáveis. Os dados dos veículos e das lojas também ficam separados da interface.
 
-- **Página inicial:** apresentação do projeto, busca rápida e veículos em destaque.
-- **Catálogo:** listagem de veículos demonstrativos com filtros combináveis por marca, modelo, preço, ano, categoria e câmbio.
-- **Filtros compartilháveis:** os filtros selecionados são refletidos na URL, permitindo abrir ou compartilhar uma busca.
-- **Detalhes do veículo:** página individual com informações demonstrativas e acesso ao formulário de visita.
-- **Agendamento demonstrativo:** formulário com validação de campos, seleção de veículo e confirmação visual após o envio.
-- **Navegação responsiva:** menu mobile e layout adaptável a celulares, tablets e desktops.
-- **Tratamento de imagens:** caso uma imagem externa não carregue, a interface apresenta um fallback.
-- **Link externo:** botão para visitar o site oficial da Lions Seminovos, aberto em nova aba.
+Na página inicial, incluí uma apresentação da loja, busca rápida, veículos em destaque e acesso ao pedido de desconto. No catálogo, dá para pesquisar e combinar filtros. A página de agendamento tem um formulário com seleção de loja. O layout se adapta a celulares e telas maiores.
+
+Procurei seguir princípios de Clean Code: usar nomes claros, dividir a interface em partes menores e manter cada componente responsável por uma tarefa. Para o tamanho deste desafio, essa organização torna o código mais simples de percorrer sem adicionar camadas desnecessárias.
+
+Também usei imagens públicas e incluí links para o site e as redes sociais da Lions Seminovos. Os formulários e os veículos são demonstrativos: nenhum dado é enviado à loja e os anúncios não representam o estoque real.
 
 ## Tecnologias
 
-- React 18
-- TypeScript
+- React e TypeScript
 - Vite
 - Tailwind CSS
 - React Router
-- Lucide React
+- Lucide React para ícones
 
-## Estrutura do projeto
+## Organização do código
 
-```text
-src/
-├── components/   # Cabeçalho, rodapé, cards, filtros e componentes reutilizáveis
-├── data/         # Dados estáticos dos veículos demonstrativos
-├── hooks/        # Lógica reutilizável dos filtros
-├── lib/          # Funções utilitárias e constantes
-├── pages/        # Início, catálogo, detalhes, agendamento e página 404
-├── types/        # Tipos TypeScript
-├── App.tsx       # Rotas e estrutura principal
-├── index.css     # Estilos globais
-└── main.tsx      # Inicialização da aplicação
-```
+O código da aplicação fica em `lions-seminovos/src`:
 
-## Como executar localmente
+- `components/`: cabeçalho, rodapé, cards, filtros e modal de desconto.
+- `data/`: dados de exemplo dos veículos e lista de lojas.
+- `hooks/`: lógica reutilizável dos filtros do catálogo.
+- `pages/`: páginas inicial, catálogo, detalhes do veículo e agendamento.
+- `types/`: tipos usados nos dados dos veículos.
+- `lib/`: funções auxiliares de formatação.
+- `App.tsx`: rotas e estrutura principal da aplicação.
+- `index.css`: estilos globais e classes compartilhadas.
 
-**Pré-requisito:** Node.js 18 ou superior e npm.
+## Como rodar o projeto
 
-1. Clone este repositório ou baixe o código.
-2. No terminal, entre na pasta do projeto.
-3. Instale as dependências e inicie o servidor:
+Você precisa ter Node.js 18 ou mais recente e npm instalados.
 
-```bash
-npm install
-npm run dev
-```
+1. No terminal, entre na pasta do projeto:
 
-O Vite exibirá no terminal o endereço local para abrir no navegador.
+   ```bash
+   cd lions-seminovos
+   ```
 
-### Verificar a versão de produção
+2. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor local:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Abra no navegador o endereço informado pelo Vite, geralmente `http://localhost:5173`.
+
+Para gerar a versão de produção, rode:
 
 ```bash
 npm run build
-npm run preview
 ```
 
-O comando `npm run build` executa a checagem de tipos TypeScript e gera a versão de produção na pasta `dist/`.
-
-## Decisões técnicas
-
-- **Componentização:** cabeçalho, rodapé, cards, filtros e imagens são separados em componentes reutilizáveis.
-- **Dados separados da interface:** os veículos e suas informações ficam centralizados em `src/data/vehicles.ts`.
-- **Filtros na URL:** os parâmetros de busca são mantidos na URL para facilitar a navegação e o compartilhamento de resultados.
-- **Validação no front-end:** o formulário verifica os campos necessários e informa o resultado de forma visível.
-- **Acessibilidade básica:** são utilizados rótulos de formulário, textos alternativos, foco visível e suporte à navegação por teclado.
-- **Falha de imagem:** existe uma alternativa visual para evitar espaços quebrados quando uma imagem não carrega.
-
-## Limitações e transparência
-
-- Os veículos, preços, quilometragens e características são **dados fictícios para demonstração**; não representam o estoque real da Lions Seminovos.
-- As fotografias são ilustrativas e podem não corresponder exatamente à marca, ao modelo ou à versão informada no card.
-- O formulário de agendamento é apenas demonstrativo: os dados não são enviados para a empresa, armazenados ou usados para confirmar uma visita.
-- O projeto não possui backend, banco de dados ou autenticação.
-- A identificação da marca é textual. Não foram incluídos logotipo oficial, endereço, telefone, horário de funcionamento ou links de redes sociais que não tenham sido confirmados.
-
-
+Os arquivos gerados ficam em `lions-seminovos/dist`.

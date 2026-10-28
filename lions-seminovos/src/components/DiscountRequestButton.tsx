@@ -69,7 +69,7 @@ export default function DiscountRequestButton({ className = 'btn-primary', vehic
               <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="discount-name" className="mb-1.5 block text-sm font-semibold">Seu nome</label>
-                  <input ref={firstField} id="discount-name" name="name" className="field" autoComplete="name" required />
+                  <input ref={firstField} id="discount-name" name="name" className="field" autoComplete="name" placeholder="Ex.: Maria Silva" required />
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
@@ -78,12 +78,13 @@ export default function DiscountRequestButton({ className = 'btn-primary', vehic
                   </div>
                   <div>
                     <label htmlFor="discount-email" className="mb-1.5 block text-sm font-semibold">Email</label>
-                    <input id="discount-email" name="email" type="email" autoComplete="email" className="field" required />
+                    <input id="discount-email" name="email" type="email" autoComplete="email" placeholder="seu@email.com" className="field" required />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="discount-store" className="mb-1.5 block text-sm font-semibold">Selecione uma loja</label>
-                  <select id="discount-store" name="store" className="field" defaultValue={stores[0]} required>
+                  <select id="discount-store" name="store" className="field" defaultValue="" required>
+                    <option value="" disabled>Selecione uma unidade</option>
                     {stores.map((store) => <option key={store} value={store}>{store}</option>)}
                   </select>
                 </div>

@@ -14,7 +14,7 @@ const differentials = [
   { icon: CalendarCheck, title: 'Facilidade para agendar', text: 'Solicite uma visita em poucos passos, pelo celular ou computador.' },
 ]
 
-const STORE_IMAGE = 'https://dmmfmlu2mykln.cloudfront.net/site/home/carrossel/foto-88415-desktop.webp'
+const STORE_IMAGE = '/loja-lions.jpg'
 
 export default function Home() {
   const featured = vehicles.filter((v) => v.featured).slice(0, 4)
@@ -69,7 +69,7 @@ export default function Home() {
       <section className="container-page py-16 sm:py-20" aria-labelledby="loja">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
           <div className="overflow-hidden rounded-xl bg-neutral-200">
-            <img src={STORE_IMAGE} alt="Fachada da loja Lions Seminovos" loading="lazy" className="aspect-[4/3] w-full object-cover" />
+            <img src={STORE_IMAGE} alt="Fachada da loja Lions Seminovos" loading="lazy" className="aspect-[16/9] w-full object-cover" />
           </div>
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900">
