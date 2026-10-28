@@ -1,0 +1,18 @@
+export const stores = [
+  'Lions Seminovos Nova Iguaçu - Dutra',
+  'Lions Seminovos Intendente Magalhães',
+  'Lions Seminovos Niterói',
+  'Lions Seminovos Barra Mansa',
+  'Lions Seminovos Campo Grande',
+  'Lions Seminovos Duque de Caxias',
+  'Lions Seminovos Vila Prudente',
+  'Lions Seminovos Osasco',
+  'Lions Seminovos Santo Amaro',
+  'Lions Seminovos São Bernardo do Campo',
+  'Lions Seminovos São Miguel',
+  'Lions Seminovos Mogi das Cruzes',
+  'Lions Seminovos Limeira',
+  'Lions Seminovos Piracicaba',
+  'Lions Seminovos Campinas',
+  'Lions Seminovos Indaiatuba',
+]
