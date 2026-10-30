@@ -66,3 +66,15 @@ npm run build
 ```
 
 Os arquivos gerados ficam em `lions-seminovos/dist`.
+
+
+
+- Tela Principal
+<img width="1393" height="916" alt="image" src="https://github.com/user-attachments/assets/0dc5f1d7-cb1c-4f92-87fa-f63f4e1ca4c3" />
+
+<img width="1221" height="922" alt="image" src="https://github.com/user-attachments/assets/4eea14d2-1c9f-46a4-bc64-f8da7fe959c4" />
+
+<img width="1576" height="764" alt="image" src="https://github.com/user-attachments/assets/7dea7c20-95cb-491b-8ecb-b4fe5eec49aa" />
+
+
+
